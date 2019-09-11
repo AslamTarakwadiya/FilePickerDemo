@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             // 1. on Upload click call ACTION_GET_CONTENT intent
             val intent = Intent(Intent.ACTION_GET_CONTENT)
             // 2. pick image only
-            intent.type = "image/*"
+            intent.type = "*/*"
             // 3. start activity
             startActivityForResult(intent, 0)
 
@@ -52,11 +52,11 @@ class MainActivity : AppCompatActivity() {
             val realPath: String
             // SDK < API11
             if (Build.VERSION.SDK_INT < 11)
-                realPath = RealPathUtil.getRealPathFromURI_BelowAPI11(this, data.data!!)
+                realPath = RealPathUtil.getPath(this, data.data!!).toString()
             else if (Build.VERSION.SDK_INT < 19)
-                realPath = RealPathUtil.getRealPathFromURI_API11to18(this, data.data!!).toString()
+                realPath = RealPathUtil.getPath(this, data.data!!).toString()
             else
-                realPath = RealPathUtil.getRealPathFromURI_API19(this, data.data!!)// SDK > 19 (Android 4.4)
+                realPath = RealPathUtil.getPath(this, data.data!!).toString()// SDK > 19 (Android 4.4)
             // SDK >= 11 && SDK < 19
 
 
