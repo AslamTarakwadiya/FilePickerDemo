@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtSDK"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello" />
+
+    <Button
+        android:id="@+id/btnSelectImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtSDK"
+        android:layout_marginBottom="20dp"
+        android:text="Select Image" />
+
+    <TextView
+        android:id="@+id/txtUriPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnSelectImage"
+        android:layout_marginBottom="20dp"
+        android:text="URI Path:" />
+
+    <TextView
+        android:id="@+id/txtRealPath"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtUriPath"
+        android:layout_marginBottom="20dp"
+        android:text="Real Path:" />
+
+    <ImageView
+        android:id="@+id/imgView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtRealPath" />
+
+</RelativeLayout>
